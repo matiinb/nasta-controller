@@ -12,12 +12,15 @@
     z-index: 999;
     -webkit-mask-image: url(https://matiinb.github.io/nasta-controller/mask.png);
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: -124px 0px;
-    -webkit-mask-size: auto 587px;
+    -webkit-mask-position: 6px -39px;
+    -webkit-mask-size: auto 591px;
     mask-image: url(https://matiinb.github.io/nasta-controller/mask.png);
     mask-repeat: no-repeat;
-    mask-position: -124px 0px;
-    mask-size: auto 587px;
+    mask-position: 6px -39px;
+    mask-size: auto 591px;
+    width: 806px !important;
+    height: 598px !important;
+    top: 41px;
 }
 
 .controller.custom {
@@ -69,13 +72,13 @@
 .custom .trigger.left {
     float: left;
     background-position: 0 0;
-    transform: translate(6px, -3px) scale(0.93);
+    transform: scale(1.05) translate(11px, 3px);
 }
 
 .custom .trigger.right {
     float: right;
     background-position: -99px 0;
-    transform: scale(0.93);
+    transform: scale(1.06) translate(-3px, 3px);
 }
 
 .custom .trigger.pressed {
@@ -96,19 +99,20 @@
 }
 
 .custom .bumper {
-    width: 99px;
-    height: 23px;
-    background: url("https://matiinb.github.io/nasta-controller/bumper.png") no-repeat;
-    background-size: 99px 23px;
+    width: 193px;
+    height: 69px;
+    background: url(https://matiinb.github.io/nasta-controller/bumper.png) no-repeat;
+    background-size: 193px 69px;
     opacity: 0;
 }
 
 .custom .bumper.left {
     float: left;
-    transform: rotateY(180deg);
+    transform: scale(0.52) translate(-67px, -12px);
 }
 
 .custom .bumper.right {
+    transform: rotateY(180deg) scale(0.53) translate(-76px, -12px);
     float: right;
 }
 
@@ -177,12 +181,14 @@
 
 .custom .back {
     float: left;
-    background-position: 0 0;
+    background-position: -28px 0;
+    transform: scale(0.81) translate(-17px, 4px);
 }
 
 .custom .start {
     float: right;
-    background-position: -28px 0;
+    background-position: 0px 0;
+    transform: scale(0.81) translate(17px, 4px);
 }
 
 .custom .back.pressed,
@@ -203,8 +209,9 @@
     position: absolute;
     width: 170px;
     height: 171px;
-    top: 148px;
-    left: 567px;
+    top: 153px;
+    left: 553px;
+    transform: scale(0.955);
 }
 
 .custom .button {
@@ -254,8 +261,9 @@
     position: absolute;
     width: 361px;
     height: 105px;
-    top: 293px;
-    left: 228px;
+    top: 292px;
+    left: 229px;
+    transform: scale(0.95);
 }
 
 .custom .stick {
@@ -295,10 +303,11 @@
    ------------------------- */
 .custom .dpad {
     position: absolute;
-    width: 125px;
-    height: 126px;
-    top: 167px;
-    left: 92px;
+    width: 122px;
+    height: 120px;
+    top: 178px;
+    left: 107px;
+    transform: scale(1.06);
 }
 
 .custom .face {
@@ -332,13 +341,13 @@
 }
 
 .custom .face.left {
-    top: 36px;
-    left: -1;
+    top: 34px;
+    left: 0px;
     background-position: -156px 0;
 }
 
 .custom .face.right {
-    top: 38px;
+    top: 34px;
     right: 0;
     background-position: -104px 0;
 }
