@@ -1,0 +1,353 @@
+/* =========================
+   CUSTOM PS4-STYLE SKIN
+   ========================= */
+
+.controller::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(https://matiinb.github.io/nasta-controller/particles.gif) center / contain no-repeat;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 999;
+    -webkit-mask-image: url(https://matiinb.github.io/nasta-controller/mask.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: -124px 0px;
+    -webkit-mask-size: auto 587px;
+    mask-image: url(https://matiinb.github.io/nasta-controller/mask.png);
+    mask-repeat: no-repeat;
+    mask-position: -124px 0px;
+    mask-size: auto 587px;
+}
+
+.controller.custom {
+    position: fixed !important;
+    top: 46% !important;
+    left: 50% !important;
+    width: 806px !important;
+    height: 598px !important;
+    margin: 0 !important;
+    transform: translate(-50%, -50%) !important;
+    transform-origin: center center !important;
+    background: url("https://matiinb.github.io/dawn-controller/base.png") no-repeat !important;
+    background-size: 806px 598px !important;
+    overflow: visible !important;
+}
+
+/* disconnected */
+/* .custom.disconnected {
+    background: url("https://matiinb.github.io/nasta-controller/disconnected.png") no-repeat;
+    background-size: 806px 598px;
+} */
+
+.custom.disconnected div {
+    display: none;
+}
+
+/* -------------------------
+   triggers
+   file: triggers.png
+   logical size: 198 x 90
+   layout: [L2][R2]
+   ------------------------- */
+.custom .triggers {
+    position: absolute;
+    left: 104px;
+    top: 0px;
+    width: 588px;
+    height: 90px;
+}
+
+.custom .trigger {
+    width: 99px;
+    height: 90px;
+    background: url("https://matiinb.github.io/nasta-controller/triggers.png") no-repeat;
+    background-size: 198px 90px;
+    opacity: 0;
+}
+
+.custom .trigger.left {
+    float: left;
+    background-position: 0 0;
+    transform: translate(6px, -3px) scale(0.93);
+}
+
+.custom .trigger.right {
+    float: right;
+    background-position: -99px 0;
+    transform: scale(0.93);
+}
+
+.custom .trigger.pressed {
+    opacity: 1;
+}
+
+/* -------------------------
+   bumpers
+   file: bumper.png
+   logical size: 99 x 23
+   ------------------------- */
+.custom .bumpers {
+    position: absolute;
+    left: 107px;
+    top: 84px;
+    width: 588px;
+    height: 23px;
+}
+
+.custom .bumper {
+    width: 99px;
+    height: 23px;
+    background: url("https://matiinb.github.io/nasta-controller/bumper.png") no-repeat;
+    background-size: 99px 23px;
+    opacity: 0;
+}
+
+.custom .bumper.left {
+    float: left;
+    transform: rotateY(180deg);
+}
+
+.custom .bumper.right {
+    float: right;
+}
+
+.custom .bumper.pressed {
+    opacity: 1;
+}
+
+/* -------------------------
+   touchpad
+   file: touchpad.png
+   logical size: 262 x 151
+   ------------------------- */
+.custom .touchpad {
+    position: absolute;
+    left: 272px;
+    top: 122px;
+    width: 262px;
+    height: 151px;
+}
+
+.custom .touchpad.pressed {
+    background: url("https://matiinb.github.io/nasta-controller/touchpad.png") no-repeat;
+    background-size: 262px 151px;
+}
+
+/* -------------------------
+   meta / ps button
+   file: meta.png
+   logical size: 42 x 42
+   ------------------------- */
+.custom .meta {
+    position: absolute;
+    left: 382px;
+    bottom: 216px;
+    width: 42px;
+    height: 42px;
+}
+
+.custom .meta.pressed {
+    /*background: url("https://matiinb.github.io/nasta-controller/meta.png") no-repeat;*/
+    background-size: 42px 42px;
+}
+
+/* -------------------------
+   back / start
+   file: start-select.png
+   logical size: 56 x 46
+   layout: [BACK][START]
+   ------------------------- */
+.custom .arrows {
+    position: absolute;
+    left: 227px;
+    top: 130px;
+    width: 352px;
+    height: 46px;
+}
+
+.custom .back,
+.custom .start {
+    width: 28px;
+    height: 46px;
+    background: url("https://matiinb.github.io/nasta-controller/start-select.png") no-repeat;
+    background-size: 56px 46px;
+    opacity: 0;
+}
+
+.custom .back {
+    float: left;
+    background-position: 0 0;
+}
+
+.custom .start {
+    float: right;
+    background-position: -28px 0;
+}
+
+.custom .back.pressed,
+.custom .start.pressed {
+    opacity: 1;
+}
+
+/* -------------------------
+   face buttons
+   file: buttons.png
+   logical size: 220 x 110
+   layout:
+   row 1: [Y][B][A][X]
+   row 2: pressed versions
+   each tile: 55 x 55
+   ------------------------- */
+.custom .abxy {
+    position: absolute;
+    width: 170px;
+    height: 171px;
+    top: 148px;
+    left: 567px;
+}
+
+.custom .button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: url("https://matiinb.github.io/nasta-controller/buttons.png") no-repeat;
+    background-size: 220px 110px;
+}
+
+.custom .a {
+    background-position: -110px 0;
+    bottom: 0;
+    left: 58px;
+}
+
+.custom .b {
+    background-position: -55px 0;
+    top: 58px;
+    right: 0;
+}
+
+.custom .x {
+    background-position: -165px 0;
+    top: 58px;
+    left: 0;
+}
+
+.custom .y {
+    background-position: 0 0;
+    left: 58px;
+    top: 0;
+}
+
+.custom .button.pressed {
+    background-position-y: -55px;
+}
+
+/* -------------------------
+   sticks
+   file: sticks.png
+   logical size: 282 x 94
+   layout: [normal][left pressed][right pressed]
+   each tile: 94 x 94
+   ------------------------- */
+.custom .sticks {
+    position: absolute;
+    width: 361px;
+    height: 105px;
+    top: 293px;
+    left: 228px;
+}
+
+.custom .stick {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    background: url("https://matiinb.github.io/nasta-controller/sticks.png") no-repeat;
+    background-size: 282px 94px;
+}
+
+.custom .stick.left {
+    top: 0;
+    left: 0;
+}
+
+.custom .stick.right {
+    top: calc(100% - 103px);
+    left: calc(100% - 108px);
+}
+
+.custom .stick.pressed.left {
+    background-position-x: -94px;
+}
+
+.custom .stick.pressed.right {
+    background-position-x: -188px;
+}
+
+/* -------------------------
+   dpad
+   file: dpad.png
+   logical size: 208 x 104
+   layout:
+   row 1: [UP][DOWN][LEFT][RIGHT]
+   row 2: pressed versions
+   each tile: 52 x 52
+   ------------------------- */
+.custom .dpad {
+    position: absolute;
+    width: 125px;
+    height: 126px;
+    top: 167px;
+    left: 92px;
+}
+
+.custom .face {
+    background: url("https://matiinb.github.io/nasta-controller/dpad.png") no-repeat;
+    background-size: 208px 104px;
+    position: absolute;
+}
+
+.custom .face.up,
+.custom .face.down {
+    width: 48px;
+    height: 52px;
+}
+
+.custom .face.left,
+.custom .face.right {
+    width: 52px;
+    height: 44px;
+}
+
+.custom .face.up {
+    left: 36px;
+    top: 0;
+    background-position: -6 0;
+}
+
+.custom .face.down {
+    left: 35px;
+    bottom: 0;
+    background-position: -52px 0;
+}
+
+.custom .face.left {
+    top: 36px;
+    left: -1;
+    background-position: -156px 0;
+}
+
+.custom .face.right {
+    top: 38px;
+    right: 0;
+    background-position: -104px 0;
+}
+
+.custom .face.pressed {
+    background-position-y: -52px;
+}
+
+/* optional */
+.custom.half {
+    margin-top: -300px;
+}
